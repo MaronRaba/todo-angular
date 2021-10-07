@@ -1,5 +1,15 @@
-<!doctype html>
-<html ng-app="todoApp">
+<label for="tarea">Nombre de la tarea:</label>
+<input placeholder="Ingresa la tarea" type="text" ngModel="nombreTarea" id="tarea">
+<button ng-click="guardarTarea()">Guardar</button>
+
+<ul>
+  <li *ngFor="let tarea of tareas;let indice = index;" [class.tachado] ="tarea.done">
+      <input ngModel="tarea.terminada" ng-change="cambiarEstadoDeTarea()" type="checkbox">
+      {{tarea.nombreTarea}}
+      <a  ng-click="eliminarTarea(indice)" class="enlace-eliminar">&times;</a>
+  </li>
+</ul>
+<!--<html ng-app="todoApp">
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="todo.js"></script>
@@ -24,4 +34,4 @@
       </form>
     </div>
   </body>
-</html>
+</html>-->

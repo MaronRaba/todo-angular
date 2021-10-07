@@ -29,7 +29,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "C:/Users/Maron/github/todo-angular/src/todo.js"
+            ]
           },
           "configurations": {
             "production": {
